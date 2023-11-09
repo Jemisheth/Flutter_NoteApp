@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, invalid_return_type_for_catch_error
+
 import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -77,7 +79,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>{
               "color_id": color_id,
             }).then((value) {
               print(value.id);
-              Navigator.pop(context);
+              Navigator.of(context).pop();
             }).catchError((error) => print("Failed to add new Note due to $error"));
           },
           child: Icon(Icons.save),
