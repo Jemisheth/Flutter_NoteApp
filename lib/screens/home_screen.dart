@@ -22,7 +22,10 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: AppStyle.mainColor,
       appBar: AppBar(
         elevation: 0.0,
-        title: const Text("Notes App"),
+        title: const Text("Notes App",
+        style: TextStyle(
+          color: Colors.white
+        ),),
         centerTitle: true,
         backgroundColor: AppStyle.mainColor,
       ),

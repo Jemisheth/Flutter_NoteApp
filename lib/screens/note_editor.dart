@@ -19,8 +19,8 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>{
   int color_id = Random().nextInt(AppStyle.cardsColor.length);
 
   String date = DateTime.now().toString();
-  TextEditingController _titleController = TextEditingController();
-  TextEditingController _mainController = TextEditingController();
+  final TextEditingController _titleController = TextEditingController();
+  final TextEditingController _mainController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>{
       appBar: AppBar(backgroundColor: 
       AppStyle.cardsColor[color_id],
       elevation: 0.0,
-      iconTheme: IconThemeData(color: Colors.black),
+      iconTheme: const IconThemeData(color: Colors.black),
       title: const Text("Add a new Note", 
       style: TextStyle(color: Colors.black),
       ),
@@ -50,10 +50,10 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>{
               ),
               style: AppStyle.mainTitle,
             ),
-            SizedBox(height: 8.0,),
+            const SizedBox(height: 8.0,),
             Text(date, style: AppStyle.dateTitle,),
 
-            SizedBox(height: 28.0,),
+            const SizedBox(height: 28.0,),
                TextField(
               controller: _mainController,
               keyboardType: TextInputType.multiline,
@@ -82,7 +82,7 @@ class _NoteEditorScreenState extends State<NoteEditorScreen>{
               Navigator.of(context).pop();
             }).catchError((error) => print("Failed to add new Note due to $error"));
           },
-          child: Icon(Icons.save),
+          child: const Icon(Icons.save),
         ),
     );
   }
