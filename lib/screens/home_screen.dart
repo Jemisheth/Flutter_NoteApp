@@ -1,3 +1,5 @@
+// ignore_for_file: use_super_parameters
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 // ignore: unnecessary_import
@@ -19,13 +21,11 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppStyle.mainColor,
+      backgroundColor: Colors.black,
       appBar: AppBar(
         elevation: 0.0,
-        title: const Text("Notes App",
-        style: TextStyle(
-          color: Colors.white
-        ),),
+        title: Text("Notes App",
+            style: GoogleFonts.rocknRollOne(color: Colors.white)),
         centerTitle: true,
         backgroundColor: AppStyle.mainColor,
       ),
@@ -35,14 +35,12 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "Your Recent Notes",
-              style: GoogleFonts.roboto(
-                color: Colors.white,
-                fontWeight: FontWeight.bold,
-                fontSize: 22.0,
-              ),
-            ),
+            Text("Your Recent Notes",
+                style: GoogleFonts.rocknRollOne(
+                  color: Colors.white,
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                )),
             const SizedBox(
               height: 20.0,
             ),
@@ -74,10 +72,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           .toList(),
                     );
                   }
-                  return Text(
-                    "There's no notes",
-                    style: GoogleFonts.nunito(color: Colors.white),
-                  );
+                  return Text("There's no notes",
+                      style: GoogleFonts.rocknRollOne(
+                        color: Colors.white,
+                      ));
                 },
               ),
             )
@@ -91,8 +89,14 @@ class _HomeScreenState extends State<HomeScreen> {
               MaterialPageRoute(
                   builder: (context) => const NoteEditorScreen()));
         },
-        label: const Text("Add Notes"),
-        icon: const Icon(Icons.add),
+        label: Text(
+          "Add Notes",
+          style: GoogleFonts.rocknRollOne(color: Colors.black, fontSize: 20),
+        ),
+        icon: const Icon(
+          Icons.add,
+          size: 30,
+        ),
       ),
     );
   }
