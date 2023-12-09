@@ -21,13 +21,13 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.purple.shade200,
       appBar: AppBar(
         elevation: 0.0,
         title: Text("Notes App",
-            style: GoogleFonts.rocknRollOne(color: Colors.white)),
+            style: GoogleFonts.rocknRollOne(color: Colors.black)),
         centerTitle: true,
-        backgroundColor: AppStyle.mainColor,
+        backgroundColor: Colors.purple.shade400,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Text("Your Recent Notes",
                 style: GoogleFonts.rocknRollOne(
-                  color: Colors.white,
+                  color: Colors.black,
                   fontSize: 22,
                   fontWeight: FontWeight.bold,
                 )),
@@ -97,6 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Icons.add,
           size: 30,
         ),
+        backgroundColor: Colors.pink.shade100,
       ),
     );
   }
