@@ -29,6 +29,8 @@ class AppStyle {
     Colors.amber.shade100,
     Colors.brown.shade100,
     Colors.grey.shade400,
+    Colors.purple,
+    Colors.pink
   ];
 
   static TextStyle mainTitle = GoogleFonts.rocknRollOne(
